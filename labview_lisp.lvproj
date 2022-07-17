@@ -15,17 +15,23 @@
 			<Item Name="mul.vi" Type="VI" URL="../src/mul.vi"/>
 		</Item>
 		<Item Name="tests" Type="Folder">
-			<Item Name="Untitled 12.vi" Type="VI" URL="../test/Untitled 12.vi"/>
+			<Item Name="unit_tester.vi" Type="VI" URL="../test/unit_tester.vi"/>
 		</Item>
 		<Item Name="Apply.vi" Type="VI" URL="../src/Apply.vi"/>
 		<Item Name="Assoc.vi" Type="VI" URL="../src/Assoc.vi"/>
+		<Item Name="ClosureData.ctl" Type="VI" URL="../src/ClosureData.ctl"/>
+		<Item Name="div.vi" Type="VI" URL="../src/div.vi"/>
 		<Item Name="Environment.ctl" Type="VI" URL="../src/Environment.ctl"/>
 		<Item Name="eval.vi" Type="VI" URL="../src/eval.vi"/>
 		<Item Name="Expression.ctl" Type="VI" URL="../src/Expression.ctl"/>
 		<Item Name="ExpressionType.ctl" Type="VI" URL="../src/ExpressionType.ctl"/>
 		<Item Name="get_token_type.vi" Type="VI" URL="../src/get_token_type.vi"/>
 		<Item Name="main.vi" Type="VI" URL="../src/main.vi"/>
-		<Item Name="parse_expression.vi" Type="VI" URL="../src/parse_expression.vi"/>
+		<Item Name="prim_lt.vi" Type="VI" URL="../src/prim_lt.vi"/>
+		<Item Name="print.vi" Type="VI" URL="../src/print.vi"/>
+		<Item Name="read.vi" Type="VI" URL="../src/read.vi"/>
+		<Item Name="read_eval_print.vi" Type="VI" URL="../src/read_eval_print.vi"/>
+		<Item Name="sub.vi" Type="VI" URL="../src/sub.vi"/>
 		<Item Name="tokenize.vi" Type="VI" URL="../src/tokenize.vi"/>
 		<Item Name="tokens_to_expression.vi" Type="VI" URL="../src/tokens_to_expression.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -33,10 +39,6 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="div.vi" Type="VI" URL="../src/div.vi"/>
-			<Item Name="expression_to_string.vi" Type="VI" URL="../src/expression_to_string.vi"/>
-			<Item Name="prim_lt.vi" Type="VI" URL="../src/prim_lt.vi"/>
-			<Item Name="sub.vi" Type="VI" URL="../src/sub.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

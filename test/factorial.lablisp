@@ -1,0 +1,6 @@
+(progn
+  (define fact
+    (lambda (x)
+      (= 0 x)
+      (* x (fact (- 1 x)))))
+  (fact 5))

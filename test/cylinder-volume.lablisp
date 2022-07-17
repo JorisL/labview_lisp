@@ -1,0 +1,10 @@
+(progn
+  (define pi 3.14)
+  (define circle-area
+    (lambda (r)
+      (* r r pi)))
+  (define cylinder-volume
+    (lambda
+      (r h)
+      (* (circle-area r) h)))
+  (cylinder-volume 4 2))
