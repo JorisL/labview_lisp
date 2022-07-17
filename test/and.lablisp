@@ -1,0 +1,5 @@
+(list
+ (and 1 2)
+ (and nil 2)
+ (and 1 nil)
+ (and nil nil))
