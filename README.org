@@ -8,3 +8,41 @@ See .lablisp source files in /test directory to see examples the implementation 
 References:
 - [[https://github.com/Robert-van-Engelen/tinylisp/blob/main/tinylisp.pdf][Lisp in 99 lines of C and how to write one yourself]]
 - [[https://khamidou.com/compilers/lisp.py/][Lisp.py]]
+
+
+* Implementation details
+
+** Expression objects
+After parsing, each lisp expression is stored using the Expression.ctl control.
+This control is a cluster with both the type of the expression and the data belonging to that expression.
+
+In this lisp implementation the following types of expression have been implemented:
+| expression type | type of data stored                 | description                                    |
+|-----------------+-------------------------------------+------------------------------------------------|
+| number          | float                               | a floating point number                        |
+| string          | string                              | a string                                       |
+| symbol          | string                              | a symbol (variable/function name)              |
+| primitive       | string                              | a build in function (e.g. lambda, if, +, etc.) |
+| nil             | -                                   | the false value                                |
+| list            | list of Expressions                 | a list containing zero or more Expressions     |
+| closure         | array of argument names, Expression | ...                                            |
+| error           | string                              | an error incl. description of error            |
+
+~read.vi~ parses the input string and builds a tree of these objects, which are then evaluated by ~eval.vi~.
+
+This is an example for how an input will be parsed:
+#+begin_src lisp
+(progn
+  (define tau (* 2 3.14))
+  tau)
+#+end_src
+
+[[www.plantuml.com/plantuml/png/bO_BQi0W44NtViNWFeBQRKCstNNHNp2DBO8FyL5IIl-z2Gr6Z2dKrNZd7WupnIH2oaOZP8G7_AnYmY0YI0fV2BQtY2JWSGIzRS2zmTFgWunHEKjUaqRV1_WIb559VSY39YsFVN3l5XUWCX7sFrVyDBFJ1RwgaiWteeiAzrqdxjl3MC-ude3DPfQXj3jEzaUNDrrEwCFDuVpkR4bX6CQzGgkPLJD7Q4_AYj3cptuBTNIKcenrCeucQPTiz0y0][PlantUML diagram]]
+
+** The Environment
+
+** Read
+
+** Eval
+
+** Print
