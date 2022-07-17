@@ -3,6 +3,8 @@ A toy implementation of a lisp-like language written in LabVIEW (because why not
 
 Still work in progress
 
+See .lablisp source files in /test directory to see examples the implementation can handle at the moment.
+
 References:
 - [[https://github.com/Robert-van-Engelen/tinylisp/blob/main/tinylisp.pdf][Lisp in 99 lines of C and how to write one yourself]]
 - [[https://khamidou.com/compilers/lisp.py/][Lisp.py]]
