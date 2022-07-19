@@ -30,7 +30,7 @@
 		<Item Name="gen_sub_environment.vi" Type="VI" URL="../src/gen_sub_environment.vi"/>
 		<Item Name="get_token_type.vi" Type="VI" URL="../src/get_token_type.vi"/>
 		<Item Name="print.vi" Type="VI" URL="../src/print.vi"/>
-		<Item Name="quasiquote_eval.vi" Type="VI" URL="../../../Documents/quasiquote_eval.vi"/>
+		<Item Name="quasiquote_eval.vi" Type="VI" URL="../src/quasiquote_eval.vi"/>
 		<Item Name="read.vi" Type="VI" URL="../src/read.vi"/>
 		<Item Name="read_environment.vi" Type="VI" URL="../src/read_environment.vi"/>
 		<Item Name="read_eval_print.vi" Type="VI" URL="../src/read_eval_print.vi"/>
