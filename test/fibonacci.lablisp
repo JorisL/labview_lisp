@@ -1,4 +1,4 @@
-(progn
+(do
   (define fibonacci
     (lambda (x)
       (cond

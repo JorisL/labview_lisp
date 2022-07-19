@@ -1,4 +1,4 @@
-(progn
+(do
   (define pi 3.14)
   (define circle-area
     (lambda (r)

@@ -1,8 +1,8 @@
-(progn
-  (define number? (lambda (x) (= (* 0 x) 0)))
-  (list
-   (number? 42)
-   (number? (/ 2 3))
-   (number? "test")
-   (number? #t)
-   (number? number?)))
+(do
+ (define number? (lambda (x) (= (* 0 x) 0)))
+ (list
+  (number? 42)
+  (number? (/ 2 3))
+  (number? "test")
+  (number? #t)
+  (number? number?)))

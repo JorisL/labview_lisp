@@ -1,0 +1,4 @@
+(do
+  (define incf (macro (x) (quasiquote (define (unquote x) (unquote x)))))
+  (define pi 3.14)
+  (incf pi))
