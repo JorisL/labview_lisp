@@ -29,6 +29,7 @@
 		<Item Name="ExpressionType.ctl" Type="VI" URL="../src/ExpressionType.ctl"/>
 		<Item Name="gen_sub_environment.vi" Type="VI" URL="../src/gen_sub_environment.vi"/>
 		<Item Name="get_token_type.vi" Type="VI" URL="../src/get_token_type.vi"/>
+		<Item Name="Is True.vi" Type="VI" URL="../src/Is True.vi"/>
 		<Item Name="print.vi" Type="VI" URL="../src/print.vi"/>
 		<Item Name="quasiquote_eval.vi" Type="VI" URL="../src/quasiquote_eval.vi"/>
 		<Item Name="read.vi" Type="VI" URL="../src/read.vi"/>
