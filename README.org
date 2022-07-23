@@ -1,14 +1,52 @@
 #+TITLE: LabVIEW Lisp
 A toy implementation of a lisp-like language written in LabVIEW (because why not).
 
-Still work in progress
+Recursion example: calculating the n^{th} fibonacci number 
+#+begin_src lisp
+(do
+  (define fibonacci
+    (lambda (n)
+      (cond
+       ((= n 0) 0)
+       ((= n 1) 1)
+       (#t (+ (fibonacci (- n 1))
+              (fibonacci (- n 2)))))))
+  (fibonacci 10))
+#+end_src
 
-See .lablisp source files in /test directory to see examples the implementation can handle at the moment.
+Macro example: defining an if-macro around a cond statement
+#+begin_src lisp
+(do
+ (define if
+   (macro
+    (test then else)
+    (quasiquote
+     (cond ((unquote test) (unquote then))
+           (#t (unquote else))))))
 
-References:
-- [[https://github.com/Robert-van-Engelen/tinylisp/blob/main/tinylisp.pdf][Lisp in 99 lines of C and how to write one yourself]]
-- [[https://khamidou.com/compilers/lisp.py/][Lisp.py]]
+ (my-if (< 2 3)
+        "foo"
+        "bar"))
+#+end_src
 
+/Still work in progress
+See .lablisp source files in /test directory to see examples the implementation can handle at the moment./
+
+* Overview
+This project started as result of me wanting to:
+- learn how to implement an interpreter for a custom (lisp-like) programming language; and
+- refresh my LabVIEW skills.
+And having seen that lisp has been implemented in a [[https://github.com/kanaka/mal][variety of languages]] but not in LabVIEW (not entirely surprising), it was also an additional push to try and do it myself :).
+
+This project has been written in LabVIEW 2022 community edition, without any additional libraries such as OpenG.
+
+Several design choices have been made to make the language as easy-as-possible and as readable-as-possible on the LabVIEW side.
+These include:
+- only a small number of build-in keywords implemented in LabVIEW, since others can be defined from within the language using those.
+- a single datatype for numbers, internally represented as a LabVIEW double.
+- a single namespace for variables, functions/lambdas, and macro's combined.
+- no reader-macros, such as =`(+ 1 ,(x))= instead of =(semiquote (+ 1 (unquote (x))))=.
+- no tail call optimisation (at least, not yet)
 
 * Implementation details
 
@@ -46,3 +84,10 @@ www.plantuml.com/plantuml/png/fP6xQWOX48LxdsAm_uLVqsRP9bsAl8ARTOFWHRo43I7ldY4iKJ
 ** Eval
 
 ** Print
+
+
+* References
+The following resources have been used as guide for learning to implement a lisp interpreter:
+- [[https://github.com/Robert-van-Engelen/tinylisp/blob/main/tinylisp.pdf][Lisp in 99 lines of C and how to write one yourself]]
+- [[https://khamidou.com/compilers/lisp.py/][Lisp.py]]
+- [[https://github.com/kanaka/mal][Make a Lisp]]
