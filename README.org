@@ -24,7 +24,7 @@ Macro example: defining an if-macro around a cond statement
      (cond ((unquote test) (unquote then))
            (#t (unquote else))))))
 
- (my-if (< 2 3)
+ (if (< 2 3)
         "foo"
         "bar"))
 #+end_src
