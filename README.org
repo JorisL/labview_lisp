@@ -90,4 +90,5 @@ www.plantuml.com/plantuml/png/fP6xQWOX48LxdsAm_uLVqsRP9bsAl8ARTOFWHRo43I7ldY4iKJ
 The following resources have been used as guide for learning to implement a lisp interpreter:
 - [[https://github.com/Robert-van-Engelen/tinylisp/blob/main/tinylisp.pdf][Lisp in 99 lines of C and how to write one yourself]]
 - [[https://khamidou.com/compilers/lisp.py/][Lisp.py]]
+- [[https://norvig.com/lispy.html][(How to Write a (Lisp) Interpreter (in Python))]]
 - [[https://github.com/kanaka/mal][Make a Lisp]]
