@@ -48,7 +48,7 @@ Several design choices have been made to make the language as easy-as-possible a
 These include:
 - only a small number of build-in keywords implemented in LabVIEW, since others can be defined from within the language using those.
 - a single datatype for numbers, internally represented as a LabVIEW double.
-- a single namespace for variables, functions/lambdas, and macro's combined.
+- a single namespace for variables, functions/lambdas, and macro's combined (lisp-1).
 - no reader-macros, such as =`(+ 1 ,(x))= instead of =(semiquote (+ 1 (unquote (x))))=.
 - no tail call optimisation (at least, not yet)
 
