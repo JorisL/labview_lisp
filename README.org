@@ -33,6 +33,40 @@ Macro example: defining an if-macro around a cond statement
  ;       (#t "bar"))
 #+end_src
 
+High level function example: create high-level functions from a tiny amount of build in functions
+#+begin_src lisp
+(do
+ (define first
+   (lambda (x)
+     (nth 0 x)))
+  
+ (define rest
+   (lambda (x)
+     (nthrest 0 x)))
+  
+ (define append
+   (lambda (lst elt)
+     (insert lst (len lst) elt)))
+  
+ (define map
+   (lambda (func lst)
+     (do
+       (define lstout (list))
+       (while (not (= lst (list)))
+         (do
+           (define lstout (append lstout 
+                                  (func (first lst))))
+           (define lst (rest lst))))
+       lstout)))
+
+ 
+  (map (lambda (x) (* x x)) 
+      (list 1 2 3 4 5 6)))
+
+; returns (1 4 9 16 25 36)
+  
+#+end_src
+
 /Still work in progress
 See .lablisp source files in /test directory to see examples the implementation can handle at the moment./
 

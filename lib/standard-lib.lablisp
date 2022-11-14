@@ -5,6 +5,18 @@
     (quasiquote
      (cond ((unquote test) (unquote then))
            (#t (unquote else))))))
+    
+ (define myand
+   (macro
+    (a b)
+    (quasiquote
+     (if (unquote a) (unquote b) nil))))
+  
+ (define myor
+   (macro
+    (a b)
+    (quasiquote
+     (if (unquote a) (unquote a) (unquote b)))))
 
  (define not
    (lambda (x)
@@ -13,6 +25,7 @@
  (define >
    (lambda (x y)
      (< y x)))
+
  (define <=
    (lambda (x y)
      (not (> x y))))
@@ -21,8 +34,29 @@
    (lambda (x y)
      (not (< x y))))
 
-
  (define number?
    (lambda (x)
      (= (* x 0) 0)))
+
+ (define first
+   (lambda (x)
+     (nth 0 x)))
+  
+ (define rest
+   (lambda (x)
+     (nthrest 0 x)))
+  
+ (define append
+   (lambda (lst elt)
+     (insert lst (len lst) elt)))
+  
+ (define map
+   (lambda (func lst)
+     (do
+       (define lstout (list))
+       (while (not (= lst (list)))
+         (do
+           (define lstout (append lstout (func (first lst))))
+           (define lst (rest lst))))
+       lstout)))
  )
