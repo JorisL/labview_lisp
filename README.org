@@ -27,6 +27,10 @@ Macro example: defining an if-macro around a cond statement
  (if (< 2 3)
         "foo"
         "bar"))
+ 
+ ; expands to:
+ ; (cond ((< 2 3) "foo")
+ ;       (#t "bar"))
 #+end_src
 
 /Still work in progress
