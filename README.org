@@ -36,18 +36,22 @@ Macro example: defining an if-macro around a cond statement
 High level function example: create high-level functions from a tiny amount of build in functions
 #+begin_src lisp
 (do
+ ; get first element from a list
  (define first
    (lambda (x)
      (nth 0 x)))
-  
+ 
+ ; get remainder of list after first element
  (define rest
    (lambda (x)
      (nthrest 0 x)))
   
+ ; insert element at the end of a list
  (define append
    (lambda (lst elt)
      (insert lst (len lst) elt)))
   
+ ; apply return a list with func applied to each element of lst
  (define map
    (lambda (func lst)
      (do
